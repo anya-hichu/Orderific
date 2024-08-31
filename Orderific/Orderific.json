@@ -1,0 +1,13 @@
+{
+  "Author": "Anya Hichu",
+  "Name": "Orderific",
+  "Punchline": "Cycle through multiple honorific titles in order.",
+  "Description": "Cycle through multiple honorific titles in order",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "honorific",
+    "timer",
+    "cycle",
+    "order"
+  ]
+}
