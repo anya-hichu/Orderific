@@ -49,7 +49,7 @@ public class ConfigWindow : Window, IDisposable
         }
 
         var titleJsons = Configuration.TitleJsons;
-        if (ImGui.InputTextMultiline("Title jsons (new line separated jsons)##titleJsons", ref titleJsons, 10000, new(ImGui.GetWindowWidth(), ImGui.GetWindowHeight() - ImGui.GetTextLineHeight() * 8))) {
+        if (ImGui.InputTextMultiline("Title jsons (new line separated jsons)##titleJsons", ref titleJsons, 10000, new(ImGui.GetWindowWidth() - 250, ImGui.GetWindowHeight() - ImGui.GetTextLineHeight() * 8))) {
             Configuration.TitleJsons = titleJsons;
             Configuration.Save();
         }
