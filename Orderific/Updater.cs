@@ -35,19 +35,10 @@ public class Updater : IDisposable
         {
             if (!LastTitleUpdateAt.HasValue || (DateTime.Now - LastTitleUpdateAt.Value).TotalSeconds > Configuration.Interval)
             {
-                var lastIndexOrOverflow = Index >= titleJsonLines.Length;
-                if (lastIndexOrOverflow)
-                {
-                    Index = 0;
-                }
-
                 SetCharacterTitle.InvokeAction(0, titleJsonLines[Index]);
                 LastTitleUpdateAt = DateTime.Now;
 
-                if(!lastIndexOrOverflow)
-                {
-                    Index++;
-                }
+                Index = (Index + 1) % titleJsonLines.Length;
             }
         }
     }
